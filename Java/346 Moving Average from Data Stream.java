@@ -1,27 +1,46 @@
 public class MovingAverage {
     //idea : queue is the abstract data-structure for this
     private LinkedList<Integer> _win;
-    private int _count, _size;
-    private int _sum;
+    private int _size;
+    private long _sum;
     /** Initialize your data structure here. */
     public MovingAverage(int size) {
         _win = new LinkedList<>();
-        _count = 0;
         _size = size;
         _sum = 0;
     }
     
     public double next(int val) {
-        if(_count < _size){
-            _sum += val;
-            _count++;
-        }
-        else{
-            _sum -= _win.poll();
-            _sum += val;
-        }
         _win.add(new Integer(val));
-        return (double)_sum / _count;
+        _sum += val;
+        if(_win.size() > _size){
+            _sum -= _win.poll();
+        }
+        
+        return (double)_sum / _win.size();
+    }
+}
+
+public class MovingAverage {
+    //idea : queue is the abstract data-structure for this
+    private int[] win;
+    private int n, insert;
+    private long sum;
+    /** Initialize your data structure here. */
+    public MovingAverage(int size) {
+        win = new int[size];
+        insert = 0;
+        n = 0;
+        sum = 0;
+    }
+    
+    public double next(int val) {
+        sum += val;
+        sum -= win[insert];
+        win[insert] = val;
+        insert = (insert + 1) % win.length;
+        if(n < win.length) n++;
+        return (double)sum / n;
     }
 }
 
