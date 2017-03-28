@@ -20,7 +20,8 @@ public class Solution {
         q.add(root);
         int depth = 0;
         while(!q.isEmpty()){
-            for(int i = 0, n = q.size(); i < n; i++){
+            int n = q.size();
+            while(n-- > 0){
                 TreeNode top = q.poll();
                 if(top.left != null) q.add(top.left);
                 if(top.right != null) q.add(top.right);
