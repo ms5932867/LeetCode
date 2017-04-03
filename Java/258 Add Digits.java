@@ -11,7 +11,6 @@ Could you do it without any loop/recursion in O(1) runtime?
 
 public class Solution {
     public int addDigits(int num) {
-        if(num == 0) return 0;
-        return num%9 == 0 ? 9 : num %9;
+        return num == 0 ? 0 : (num%9 == 0 ? 9 : num %9);
     }
 }
