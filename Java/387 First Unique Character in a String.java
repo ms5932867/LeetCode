@@ -24,3 +24,20 @@ public class Solution {
         return res == Integer.MAX_VALUE ? -1 : res;
     }
 }
+
+public class Solution {
+    public int firstUniqChar(String s) {
+        int[] mem = new int[26];
+        for(int i = 0; i < s.length(); i++){
+            int index = s.charAt(i) - 'a';
+            mem[index]++;
+        }
+        
+
+        for(int i = 0; i < s.length(); i++){
+            if(mem[s.charAt(i) - 'a'] == 1)
+                return i;
+        }
+        return -1;
+    }
+}
