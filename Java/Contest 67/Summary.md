@@ -1,65 +1,6 @@
-# <img src="http://www.rice.edu/_images/rice-logo.jpg" width=180> Comp427, Spring 2018, Homework 1
-## Rational Paranoia
-The homework specifications, as well as the corresponding course slide decks,
-can be found on the [Comp427 Piazza](https://piazza.com/class/jc6qwh803mr3gu).
-This assignment is due **Thursday, January 18 at 6 p.m.**
-
-You will do this homework by editing the _README.md_ file. It's in
-[MarkDown format](https://guides.github.com/features/mastering-markdown/)
-and will be rendered to beautiful HTML when you visit your GitHub repo.
-
-## Student Information
-Please also edit _README.md_ and replace your instructor's name and NetID with your own:
-
-_Student name_: Dan WALLACH
-
-_Student NetID_: dwallach
-
-Your NetID is typically your initials and a numeric digit. That's
-what we need here.
-
-_If you contacted us in advance and we approved a late submission,
-please cut-and-paste the text from that email here._
-
-## Problem 1
-- Scenario: {Stadium|TSA|Documents|Grading|G20}
-- Assumptions:
-  - explain_your_assumptions
-- Assets:
-  - explanatory_paragraph
-  - explanatory_paragraph ...
-- Threats:
-  - explanatory_paragraph 
-  - explanatory_paragraph ...
-- Countermeasures:
-  - explanatory_paragraph
-  - explanatory_paragraph ...
-
+# LeetCode Contest 67 Summary
+## Porblem 1
+第一题其实很简单，其实就是遍历一下[L,R]所有的数，每个数用位运算判断bit个数。但是我思考过多，在想有没有更加高效的算法。导致我有点犹豫，影响了速度。我所感觉的高效算法是，不需要遍历[L,R]，而是直接计算每一bit上出现1的次数。而这样的想法确实不知道怎么实现。因此我应当及时放弃自己没有任何思路的想法，找一个可行的解为先。
 ## Problem 2
-- Scenario: {Stadium|TSA|Documents|Grading|G20}
-- Assumptions:
-  - explain_your_assumptions
-- Assets:
-  - explanatory_paragraph
-  - explanatory_paragraph ...
-- Threats:
-  - explanatory_paragraph 
-  - explanatory_paragraph ...
-- Countermeasures:
-  - explanatory_paragraph
-  - explanatory_paragraph ...
 
 ## Problem 3
-- Scenario: Your choice (give a brief explanation)
-- Assumptions:
-  - explain_your_assumptions
-- Assets:
-  - explanatory_paragraph
-  - explanatory_paragraph ...
-- Threats:
-  - explanatory_paragraph 
-  - explanatory_paragraph ...
-- Countermeasures:
-  - explanatory_paragraph
-  - explanatory_paragraph ...
-
