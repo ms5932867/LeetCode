@@ -26,8 +26,28 @@ public class Solution {
             else{
                 i++;
             }
-        }
-        
+        }       
         return new int[]{};
+    }
+}
+
+public class Solution {
+    public int[] twoSum(int[] numbers, int target) {
+        for(int s = 0; s < numbers.length - 1; s++){
+            int bs = BS(numbers, s + 1, numbers.length - 1, target - numbers[s]);
+            if(bs > s){ return new int[]{s + 1, bs + 1}; }
+        }
+        return new int[]{};
+    }
+    
+    private int BS(int[] nums, int start, int end, int target){
+        if(start < 0 || end >= nums.length) return -1;
+        while(start <= end){
+            int m = start + (end - start) / 2;
+            if(nums[m] == target) return m;
+            if(nums[m] > target) end = m - 1;
+            else start = m + 1;
+        }
+        return -1;
     }
 }

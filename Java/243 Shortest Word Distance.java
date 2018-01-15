@@ -25,3 +25,15 @@ public class Solution {
         return min;
     }
 }
+
+public class Solution {
+    public int shortestDistance(String[] words, String word1, String word2) {
+        int p1 = -words.length, p2 = 2*p1, min = Integer.MAX_VALUE;
+        for(int i = 0; i < words.length; i++){
+            if(words[i].equals(word1)) p1 = i;
+            if(words[i].equals(word2)) p2 = i; 
+            min = Math.min(min, Math.abs(p1 - p2));
+        }
+        return min;
+    }
+}

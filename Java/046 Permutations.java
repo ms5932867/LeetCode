@@ -3,9 +3,9 @@ Given a collection of distinct numbers, return all possible permutations.
 */
 public class Solution {
     // backtrack summary : a method to find all solutions under certain constrains
-    // 1. when a new solution is find, copy it to a new obejct and add it into the final result
+    // 1. when a new solution is find, copy it to a new object and add it into the final result
     // 2. result could be put outside the helper function, so that it won't be passed during recursive call 
-    // 3. abandon the perial candidates, this is the most important part
+    // 3. abandon the partial candidates, this is the most important part
     List<List<Integer>> res = new ArrayList<>();
     List<Integer> tmpRes = new ArrayList<Integer>();
     int[] nums;
